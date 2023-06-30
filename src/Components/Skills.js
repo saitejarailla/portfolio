@@ -1,16 +1,14 @@
 import './styles/Skills.css';
-import c from './images/Skills Icons/C.png'
-import cpp from './images/Skills Icons/c++.jpg'
-import python from './images/Skills Icons/pyhton.jpg'
-import java from './images/Skills Icons/java.jpg'
+import c from './images/Skills Icons/c.png'
+import cpp from './images/Skills Icons/c++.png'
+import python from './images/Skills Icons/python.png'
+import java from './images/Skills Icons/java.png'
 
 import html from './images/Skills Icons/html.svg'
 import css from './images/Skills Icons/css.png'
 import js from './images/Skills Icons/JavaScript.png'
 import reactjs from './images/Skills Icons/Reactjs.png'
 import bootstarp from './images/Skills Icons/bootstrap.png'
-import jQuery from './images/Skills Icons/jQuery.png'
-import php from './images/Skills Icons/php.png'
 import nodejs from './images/Skills Icons/nodejs.png'
 
 function Skills() {
@@ -54,14 +52,6 @@ function Skills() {
         {
             icon : reactjs,
             name : "Reactjs"
-        },
-        {
-            icon : jQuery,
-            name : "jQuery"
-        },
-        {
-            icon : php,
-            name : "PHP"
         },
         {
             icon : nodejs,

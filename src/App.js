@@ -8,6 +8,7 @@ import Projects from './Components/Projects';
 import Certificates from './Components/Certificates';
 import navBtn from './Components/images/navbtn.png';
 import navicon from './Components/images/navicon.png';
+import ContactUs from './Components/ContactUs';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
             <Link to='skills'  className='navItems col-2 '>Skills</Link>
             <Link to='projects'  className='navItems col-2'>Projects</Link>
             <Link to='certificates'  className='navItems col-2'>Certificates</Link>
+            <Link to='ContactUs'  className='navItems col-2'>ContactUs</Link>
       </div>
 
       {/* conditional rendering */}
@@ -39,6 +41,7 @@ function App() {
                   <Link to='skills'  className='navItems col-12 p-3' onClick={()=> {status==="true" ? SetStatus("false") : SetStatus("true")}}>Skills</Link>
                   <Link to='projects'  className='navItems col-12 p-3' onClick={()=> {status==="true" ? SetStatus("false") : SetStatus("true")}}>Projects</Link>
                   <Link to='certificates'  className='navItems col-12 p-3' onClick={()=> {status==="true" ? SetStatus("false") : SetStatus("true")}}>Certificates</Link>
+                  <Link to='ContactUs'  className='navItems col-12 p-3' onClick={()=> {status==="true" ? SetStatus("false") : SetStatus("true")}}>ContactUs</Link>
               </div>
             </div>
           </div>
@@ -49,6 +52,7 @@ function App() {
         <Route path='/skills' element={<Skills/>}/>
         <Route path='/Projects' element={<Projects/>}/>
         <Route path='/certificates' element={<Certificates/>}/>
+        <Route path='/ContactUs' element={<ContactUs />}/>
       </Routes>
     </div>
    

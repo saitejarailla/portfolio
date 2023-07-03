@@ -1,5 +1,7 @@
 import './styles/Projects.css';
 import p1 from './images/projects/p2.jpg';
+import git from './images/contact/github.png'
+import web from './images/contact/web.png'
 
 function Projects() {
 
@@ -10,16 +12,8 @@ function Projects() {
             title : ' Stock Alerter',
             tech  : ' Reactjs, CSS, Bootstrap.',
             desc  : ' Stock Alerter is a web application that helps users set an alert for a user-defined price and the user will get an alert mail when the stock hits the user-defined price.',
-            github: ' https://github.com/saitejarailla/stock_alerter_1'
-        },
-        
-        {
-            id    : 3,
-            img   : p1,
-            title : ' ',
-            tech  : ' ',
-            desc  : ' ',
-            github: ' '
+            github: ' https://github.com/saitejarailla/stock_alerter_1',
+            web : 'https://stock-alerter.netlify.app/'
         }
     ]
 
@@ -42,7 +36,7 @@ function Projects() {
                                                                         <p><b>Title :</b>{project.title}</p>
                                                                         <p><b>Technologies :</b>{project.tech}</p>
                                                                         <p><b>Description :</b>{project.desc}</p>
-                                                                        <p><b>GitHub :</b><a href={project.github}> Click here to visit {project.title} code.</a></p>
+                                                                        <a href={project.github} ><img src={git} style={{width:'40px'}}></img></a><a href={project.web} ><img src={web} style={{width:'40px'}}></img></a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -58,7 +52,7 @@ function Projects() {
                                                                         <p><b>Title :</b>{project.title}</p>
                                                                         <p><b>Technologies :</b>{project.tech}</p>
                                                                         <p><b>Description :</b>{project.desc}</p>
-                                                                        <p><b>GitHub :</b><a href={project.github}> Click here to visit {project.title} code.</a></p>
+                                                                        <a href='' ><img src={git} style={{width:'40px'}}></img></a><a href='' ><img src={web} style={{width:'40px'}}></img></a>
                                                                     </div>
                                                                 </div>
                                                             </div>

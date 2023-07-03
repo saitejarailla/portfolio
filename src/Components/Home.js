@@ -39,7 +39,7 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                    <img src={pic}  className='pic'></img>
+                    <img src=""  alt='no pic' className='pic'></img>
                     <div className='down'>
                         <div style={{backgroundColor: 'white',height:"40vw"}}>
                             <div className='text-center'>

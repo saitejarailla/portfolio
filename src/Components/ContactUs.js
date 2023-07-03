@@ -1,43 +1,61 @@
-import React, { useState } from 'react'
-import { useForm } from 'react-hook-form';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import contact from './images/contact/contact-illustration.gif';
+import './styles/ContactUs.css';
 
 function ContactUs() {
-    const [user , setUser] = useState({})
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-      } = useForm();
+  const form = useRef();
+  
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log(form);
+    emailjs
+      .sendForm('service_i5rqd9s', 'template_woezm9d', form.current, 'Y1lAR7WJoilJOhm0F')
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
-      const sendEmail=(user)=>{
-        console.log(user)
-    if(window.Email){
-        // user.preventDefault();
-        window.Email.send({
-            // Host : "smtp.elasticemail.com",
-            // Username : "saitejarailla@gmail.com",
-            // Password : "a51e0187-a4fa-44de-8010-9350fb3bdbc8",
-            SecureToken : "a51e0187-a4fa-44de-8010-9350fb3bdbc8",
-            To : 'saitejarailla1@gmail.com',
-            From : 'saitejarailla@gmail.com',
-            Subject : user.subject,
-            Body : `${user.email} wants to say ${user.body}`
-        }).then(
-          message => alert(message)
-        );
-    }
-    }
   return (
     <div>
-      <form onSubmit={handleSubmit((data) => sendEmail(data))}>
-      <input type='email' {...register('email', { required : true})} />
-      {errors.email && <p>email id is required.</p>}
-      <input type='text' {...register('subject')} />
-      <input type='text' {...register('body')} />
-      <input type="submit" />
-    </form>
+      <div className='contactUsTop'></div>
+    <div className="contact-container">
+      <div className="contact-gif-container p-4">
+        <img src={contact} alt="no gif" className="contact-gif" />
+      </div>
+      <div className="contact-form-container">
+        <div className="mt-5 mx-3 pt-5">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="contact-form"
+          >
+            <label htmlFor="mailid" className="form-label">Email</label>
+            <input type="email" name="mailid" id="mailid" className="form-input" />
+            <label htmlFor="subject" className="form-label">Subject</label>
+            <input type="text" name="subject" id="subject" className="form-input" />
+            <label htmlFor="message" className="form-label">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              className="form-textarea"
+            />
+            <input
+              type="submit"
+              value="Send"
+              className="form-submit"
+            />
+          </form>
+        </div>
+      </div>
     </div>
-  )
+    </div>
+  );
 }
 
-export default ContactUs;
+export default ContactUs;

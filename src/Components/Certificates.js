@@ -1,16 +1,8 @@
 import './styles/Certificates.css';
 
-import c1 from './images/certificates/1.png'
-import c2 from './images/certificates/7.jpeg'
-import c3 from './images/certificates/3.jpg'
-import c4 from './images/certificates/2.jpg'
-import c5 from './images/certificates/5.jpeg'
-import c6 from './images/certificates/6.jpeg'
-import c7 from './images/certificates/4.jpg'
 
 
 import m1 from './images/certificates/m1.jpg'
-import m2 from './images/certificates/m2.jpg'
 import m3 from './images/certificates/m3.png'
 import m4 from './images/certificates/m4.png'
 
@@ -18,18 +10,7 @@ import m4 from './images/certificates/m4.png'
 function Certificates() {
 
     const courseCertificates = [
-        { 
-            icon : c1 ,
-            name : "Deep Learning Workshop"
-        },
-        { 
-            icon : c2 ,
-            name : "Git Training"
-        },
-        { 
-            icon : c7 ,
-            name : "Data Structures and Algorithms"
-        }
+      
     ]
 
     const meritCertificate = [

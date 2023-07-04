@@ -25,7 +25,7 @@ function ContactUs() {
     <div>
       <div className='contactUsTop'></div>
     <div className="contact-container">
-      <div className="contact-gif-container p-4">
+      <div className="contact-gif-container p-2">
         <img src={contact} alt="no gif" className="contact-gif" />
       </div>
       <div className="contact-form-container">

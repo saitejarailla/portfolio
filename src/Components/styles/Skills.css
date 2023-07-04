@@ -27,15 +27,13 @@
 @media all and (min-width :996px){
     
     .eachtechnology:hover{
-        background-color: white;
-        color: black;
-        font-size: 150%;
+        transform: scale(110%);
+        box-shadow: 2px 2px 5px white;
     }
 
     .eachlanguage:hover{
-        background-color: black;
-        color: white;
-        font-size: 150%;
+        transform: scale(110%);
+        box-shadow: 2px 2px 5px grey;
     }
 }
 

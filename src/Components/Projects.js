@@ -13,7 +13,28 @@ function Projects() {
             tech  : ' Reactjs, CSS, Bootstrap.',
             desc  : ' Stock Alerter is a web application that helps users set an alert for a user-defined price and the user will get an alert mail when the stock hits the user-defined price.',
             github: ' https://github.com/saitejarailla/stock_alerter_1',
-            web : 'https://stock-alerter.netlify.app/'
+            web : 'https://stock-alerter.netlify.app/',
+            deploy : true
+        },
+        {
+            id  : 2,
+            img : p1 ,
+            title : 'portfolio',
+            tech  : ' Reactjs, CSS, Bootstrap.',
+            desc  : 'Discover my portfolio website, a captivating showcase of my skills, projects, certifications, and personal details, elegantly designed to impress and engage visitors.',
+            github: 'https://github.com/saitejarailla/portfolio',
+            web : 'https://saitejarailla.netlify.app/',
+            deploy : true
+        },
+        {
+            id  : 2,
+            img : p1 ,
+            title : 'portfolio',
+            tech  : ' Reactjs, CSS, Bootstrap.',
+            desc  : 'Discover my portfolio website, a captivating showcase of my skills, projects, certifications, and personal details, elegantly designed to impress and engage visitors.',
+            github: 'https://github.com/saitejarailla/portfolio',
+            web : 'https://saitejarailla.netlify.app/',
+            deploy : false
         }
     ]
 
@@ -25,7 +46,7 @@ function Projects() {
                     projects.map(
                                     (project) =>
                                                 {
-                                                    if (project.id % 2 !=0) 
+                                                    if (1) 
                                                         return(
                                                             <div style={{backgroundColor: 'white',border: '1px solid'}} className='row m-4'>
                                                                 <div className='row m-1'>
@@ -36,24 +57,10 @@ function Projects() {
                                                                         <p><b>Title :</b>{project.title}</p>
                                                                         <p><b>Technologies :</b>{project.tech}</p>
                                                                         <p><b>Description :</b>{project.desc}</p>
-                                                                        <a href={project.github} ><img src={git} style={{width:'40px'}}></img></a><a href={project.web} ><img src={web} style={{width:'40px'}}></img></a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        )
-                                                    if (project.id % 2 ==0)
-                                                        return(
-                                                            <div style={{backgroundColor: 'white',border: '1px solid'}} className='row m-4'>
-                                                                <div className='row m-1'>
-                                                                    <div className='col-12 col-md-6 col-lg-5 col-xl-4 my-auto py-2 order-md-2' >
-                                                                        <img src={project.img}  width='100%'/>
-                                                                    </div>
-                                                                    <div className='col-12 col-md-6 col-lg-7 col-xl-8 my-auto py-4 evenProjectDesc order-md-1'>
-                                                                        <p><b>Title :</b>{project.title}</p>
-                                                                        <p><b>Technologies :</b>{project.tech}</p>
-                                                                        <p><b>Description :</b>{project.desc}</p>
-                                                                        <a href='' ><img src={git} style={{width:'40px'}}></img></a><a href='' ><img src={web} style={{width:'40px'}}></img></a>
-                                                                    </div>
+                                                                        <a href={project.github} ><img src={git} className='git' style={{width:'40px'}}></img></a>
+                                                                        {(project.deploy)&&
+                                                                        <a href={project.web} ><img className='web' src={web} style={{width:'40px'}}></img></a>}
+                                                                    </div> 
                                                                 </div>
                                                             </div>
                                                         )

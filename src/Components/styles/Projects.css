@@ -38,4 +38,10 @@
     }
 }
 
+.git:hover{
+    transform: scale(110%);
+}
 
+.web:hover{
+    transform:  scale(110%);
+}

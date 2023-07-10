@@ -1,5 +1,7 @@
 import './styles/Projects.css';
-import p1 from './images/projects/p2.jpg';
+import p2 from './images/projects/p2.png';
+import p3 from './images/projects/p3.png'
+import p4 from './images/projects/p4.png'
 import git from './images/contact/github.png'
 import web from './images/contact/web.png'
 
@@ -8,7 +10,7 @@ function Projects() {
     let projects = [
         {
             id    : 1,
-            img   : p1,
+            img   : p2,
             title : ' Stock Alerter',
             tech  : ' Reactjs, CSS, Bootstrap.',
             desc  : ' Stock Alerter is a web application that helps users set an alert for a user-defined price and the user will get an alert mail when the stock hits the user-defined price.',
@@ -18,7 +20,7 @@ function Projects() {
         },
         {
             id  : 2,
-            img : p1 ,
+            img : p3 ,
             title : 'portfolio',
             tech  : ' Reactjs, CSS, Bootstrap.',
             desc  : 'Discover my portfolio website, a captivating showcase of my skills, projects, certifications, and personal details, elegantly designed to impress and engage visitors.',
@@ -28,12 +30,12 @@ function Projects() {
         },
         {
             id  : 2,
-            img : p1 ,
-            title : 'portfolio',
+            img : p4 ,
+            title : 'food donation website',
             tech  : ' Reactjs, CSS, Bootstrap.',
-            desc  : 'Discover my portfolio website, a captivating showcase of my skills, projects, certifications, and personal details, elegantly designed to impress and engage visitors.',
-            github: 'https://github.com/saitejarailla/portfolio',
-            web : 'https://saitejarailla.netlify.app/',
+            desc  : 'Developed a web-based application using React js that acts as an interface between food donors and recipients.',
+            github: 'https://github.com/saitejarailla/fooddonation1',
+            web : '',
             deploy : false
         }
     ]

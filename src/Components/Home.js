@@ -1,9 +1,9 @@
-import pic from './images/photo.jpg';
 
 import c1 from './images/contact/phone.png';
 import c2 from './images/contact/email.png';
 import c3 from './images/contact/linkedin.png';
 import c4 from './images/contact/github.png';
+import mypic from './images/mypic.jpg'
 import { useState } from 'react';
 
 function Home() {
@@ -39,7 +39,7 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                    <img src=""  alt='no pic' className='pic'></img>
+                    <img src={mypic}  alt='no pic' className='pic'></img>
                     <div className='down'>
                         <div style={{backgroundColor: 'white',height:"40vw"}}>
                             <div className='text-center'>
@@ -57,10 +57,10 @@ function Home() {
                                 </div>
                                 <div>
                                     <ul className='contactDetails row mx-2 ' onMouseLeave={()=>{SetDetails("")}}>
-                                        <li className='col-3' onMouseOver={()=>{SetDetails(['Phone No : ' , '+91 9347169145'])}}><img src={c1} width='37%' /></li>
-                                        <a href='https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlLXFGddsGtvbLXtcQzVFRfHTMdsNHPDdzpbsGLTFfqXhVGMhTSJJlClLBZvnDbqWmbWLV' className='col-3'><li onMouseOver={()=>{SetDetails(['EmailId : ' , 'durgaprasadsiddula209@gmail.com'])}}><img src={c2} width='35%' style={{borderRadius:'50%'}}/></li></a>
-                                        <a href="https://www.linkedin.com/in/s-durga-prasad-87676722a/" className='col-3'><li  onMouseOver={()=>{SetDetails(['LinkedIn : ' ,  'sidduladurgaprasad'])}}><img src={c3} width='44%'/></li></a>
-                                        <a href='https://github.com/sidduladurgaprasad' className='col-3'><li onMouseOver={()=>{SetDetails(['GitHub : ' , 'sidduladurgaprasad'])}}><img src={c4} width='38%'/></li></a>
+                                        <li className='col-3' onMouseOver={()=>{SetDetails(['Phone No : ' , '+91 9381091697'])}}><img src={c1} width='37%' /></li>
+                                        <a href='https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlLXFGddsGtvbLXtcQzVFRfHTMdsNHPDdzpbsGLTFfqXhVGMhTSJJlClLBZvnDbqWmbWLV' className='col-3'><li onMouseOver={()=>{SetDetails(['EmailId : ' , 'saitejarailla@gmail.com'])}}><img src={c2} width='35%' style={{borderRadius:'50%'}}/></li></a>
+                                        <a href="https://www.linkedin.com/in/saitejarailla" className='col-3'><li  onMouseOver={()=>{SetDetails(['LinkedIn : ' ,  'saitejarailla'])}}><img src={c3} width='44%'/></li></a>
+                                        <a href='https://github.com/saitejarailla' className='col-3'><li onMouseOver={()=>{SetDetails(['GitHub : ' , 'saitejarailla'])}}><img src={c4} width='38%'/></li></a>
                                     </ul>
                                 </div>
                                 <p className='details'><b>{details[0]}</b>{details[1]}</p>

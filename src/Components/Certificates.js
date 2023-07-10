@@ -6,11 +6,16 @@ import m1 from './images/certificates/m1.jpg'
 import m3 from './images/certificates/m3.png'
 import m4 from './images/certificates/m4.png'
 
+import c1 from './images/certificates/c1.png'
+
 
 function Certificates() {
 
     const courseCertificates = [
-      
+      {
+        icon : c1,
+        name : "Smart Interviews"
+    }
     ]
     const [selectedCertificate, setSelectedCertificate] = useState(null);
     const meritCertificate = [
